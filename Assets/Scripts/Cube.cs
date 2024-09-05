@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : MonoBehaviour
+public class Cube : Shape
 {
-    // Start is called before the first frame update
-    void Start()
+    // INHERITANCE
+    
+    public Cube()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Type = "Cube";
+        Color = "Red";
+        Size = "Small";
     }
 }

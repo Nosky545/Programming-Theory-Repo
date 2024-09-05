@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sphere : MonoBehaviour
+public class Sphere : Shape
 {
-    // Start is called before the first frame update
-    void Start()
+    // INHERITANCE
+    
+    public Sphere()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Type = "Sphere";
+        Color = "Green";
+        Size = "Medium";
     }
 }
