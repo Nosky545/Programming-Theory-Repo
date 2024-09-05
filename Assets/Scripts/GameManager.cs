@@ -2,19 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public Camera GameCamera;
-
-    public GameObject Marker;
-    public TextMeshProUGUI textDisplay;
-    public GameObject textSelect;
+    private Camera GameCamera;
+    private GameObject Marker;
+    private TextMeshProUGUI textDisplay;
+    private GameObject textSelect;
     private Shape m_Selected = null;
 
-    private void Start()
+    private void Awake()
     {
-        Marker.SetActive(false);
+        GameCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        Marker = GameObject.Find("Marker");
+        textDisplay = GameObject.Find("Text Display").GetComponent<TextMeshProUGUI>();
+        textSelect = GameObject.Find("Select Text");
     }
 
     private void Update()
