@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
             Marker.SetActive(true);
             Marker.transform.SetParent(m_Selected.transform, false);
             Marker.transform.localPosition = new(0, 1.5f, 0);
+            Marker.transform.localScale = new Vector3(0.15f, 1, 1);
         }    
     }
 }
